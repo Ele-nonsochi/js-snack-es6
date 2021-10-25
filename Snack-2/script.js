@@ -30,11 +30,22 @@ function numeriRandom(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
-//
+//Creiamo numeri random per i punti e i falli 
 
 for (let i = 0; i < teams.length; i++) {
 
-    teams[i].point = numeriRandom(1, 20);
+    teams[i].point = numeriRandom(1, 50);
     teams[i].foul = numeriRandom(5, 20);
 }
 console.log(teams);
+
+let newTeam = []
+
+//Creo un nuovo array da stampare in console solo nomi e falli
+
+for (let i = 0; i < teams.length; i++) {
+    const { name, foul } = teams[i];
+    //Stampo in console 
+    newTeam.push({ name, foul });
+}
+console.log(newTeam)

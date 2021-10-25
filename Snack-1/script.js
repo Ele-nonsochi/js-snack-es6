@@ -45,6 +45,7 @@ function getLightest() {
     }
 
     const { name, weight } = lightBike;
+    console.log(lightBike)
 
     const showResult = document.getElementById("showResult");
     showResult.innerHTML = `Nome bicicletta: ${name} <br> Peso Bicicletta: ${weight}`;
